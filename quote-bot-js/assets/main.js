@@ -4,7 +4,7 @@
 const API_URL = "https://api.openai.com/v1/chat/completions";
 const MODEL = "gpt-3.5-turbo";
 // Inserisci qui la tua chiave API
-const API_KEY = "";
+const API_KEY = "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";
 
 const loader = document.querySelector('.loading');
 const modal = document.querySelector(".modal");
@@ -42,7 +42,7 @@ async function playCharacter(nameCharacter) {
     // 4. Interpretare la risposta in JSON
     const data = await response.json();
     // 5. Compilare la modale con i dati ricevuti
-    /* const message = data.choices[0].message.content; */
+    const message = data.choices[0].message.content;
     console.log(data);
 
     modalContent.innerHTML = `
